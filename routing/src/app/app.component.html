@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="row my-5">
+    <div class="col-12 col-sm-10 col-md-8">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/produtos']">Produtos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/fornecedores']">Fornecedores</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-sm-10 col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+</div>

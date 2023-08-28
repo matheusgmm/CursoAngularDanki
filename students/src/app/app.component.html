@@ -1,0 +1,27 @@
+<div class="container">
+
+  <app-student-registry
+    (approvedCreated)="aprovedAdded($event)"
+    (substituteCreated)="substituteAdded($event)"
+  ></app-student-registry>
+
+
+  <!-- Students List -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <button class="btn btn-warning mb-2 mr-2" (click)="changeFirst()">Mudar Primeiro</button>
+      <button class="btn btn-danger mb-2" (click)="destroyFirst()">Remover Primeiro</button>
+      <app-student 
+      *ngFor="let student of students" 
+      [student]="student"
+      [type]="student.type">
+        <div class="d-flex w-100 justify-content-between">
+          <label>{{ student.name }}</label>
+          <small #studentDescription>{{ student.description }}</small>
+        </div>
+      </app-student>
+    
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+<ul class="list-group">
+    <li href=""
+        [ngClass]="{
+          'list-group-item': true,
+          'mb-2': true,
+          'list-group-item-success' : type === 'approved',
+          'list-group-item-secondary' : type === 'substitute'
+        }" #studentLine>
+        <ng-content></ng-content>
+        
+    </li>
+  </ul>
