@@ -1,20 +1,20 @@
 <nav class="navbar navbar-expand navbar-light bg-light">
     <div class="container">
         <div class="navbar-header">
-            <a href="#" class="navbar-brand">Marmitaria</a>
+            <a class="navbar-brand" style="cursor: pointer" [routerLink]="['/marmitas']">Marmitaria</a>
         </div>
 
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="nav-item"><a href="#" (click)="onSelect('packages')" class="nav-link active">Marmitas</a></li>
-                <li class="nav-item"><a href="#" (click)="onSelect('food-list')" class="nav-link">Lista de alimentos</a></li>
+                <li class="nav-item"><a [routerLink]="['/marmitas']" routerLinkActive="active" class="nav-link">Marmitas</a></li>
+                <li class="nav-item"><a [routerLink]="['/alimentos']" routerLinkActive="active" class="nav-link">Lista de alimentos</a></li>
             </ul>
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" appDropdown>Manutenção</a>
+                    <a class="nav-link dropdown-toggle" appDropdown style="cursor: pointer">Manutenção</a>
                     <ul class="dropdown-menu">
-                        <li class="nav-item"><a href="#" class="nav-link">Incluir Dados</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Buscar Dados</a></li>
+                        <li class="nav-item"><a class="nav-link" style="cursor: pointer">Incluir Dados</a></li>
+                        <li class="nav-item"><a class="nav-link" style="cursor: pointer">Buscar Dados</a></li>
                     </ul>
                 </li>
             </ul>

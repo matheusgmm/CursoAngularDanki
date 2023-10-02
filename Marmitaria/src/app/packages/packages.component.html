@@ -3,13 +3,15 @@
         <app-package-list></app-package-list>
     </div>
     <div class="col-md-7">
-        <app-package-details
+        <router-outlet></router-outlet>
+        
+        <!-- <app-package-details
             *ngIf="selectedPackage; else info"
             [packageSelected]="selectedPackage"
             ></app-package-details>
         <ng-template #info>
             <p>Por favor seleciona uma marmita.</p>
-        </ng-template>
+        </ng-template> -->
         
     </div>
 </div>

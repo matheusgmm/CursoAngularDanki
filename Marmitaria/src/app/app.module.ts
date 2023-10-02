@@ -11,6 +11,8 @@ import { FoodListComponent } from './food-list/food-list.component';
 import { FoodEditComponent } from './food-list/food-edit/food-edit.component';
 import DropdownDirective from './shared/dropdown.directive';
 import { FoodListService } from './food-list/food-list.service';
+import { AppRoutingModule } from './app-routing.module';
+import { PackagesDefaultComponent } from './packages/packages-default/packages-default.component';
 
 
 @NgModule({
@@ -23,11 +25,13 @@ import { FoodListService } from './food-list/food-list.service';
     PackageItemComponent,
     FoodListComponent,
     FoodEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    PackagesDefaultComponent
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [FoodListService],
   bootstrap: [AppComponent]

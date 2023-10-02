@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
 
+export interface IProduct {
+  id: number;
+  name: string;
+  status: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -7,7 +13,7 @@ export class ProductsService {
 
   constructor() { }
 
-  private products = [
+  private products: IProduct[] = [
     {
         id: 1,
         name: 'TV de 15 Polegadas',
@@ -30,10 +36,10 @@ export class ProductsService {
   }
 
   getProduct(id: number) {
-      return this.products.find(p => p.id === id);
+      return this.products.find(p => p.id === id) as IProduct;
   }
 
-  updateProduct(id: number, productInfo: { name: string, status: string }) {
+  updateProduct(id: number | undefined, productInfo: { name: string, status: string }) {
     const product = this.products.find((p) => p.id === id);
 
     if (product) {
